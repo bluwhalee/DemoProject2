@@ -30,10 +30,7 @@ class MainActivity : AppCompatActivity() {
         tabLayout = binding.mainTabLayout
         pagerAdapter = MainVPAdapter(supportFragmentManager, lifecycle)
         pager2.adapter = pagerAdapter
-//
-//        tabLayout.addTab(tabLayout.newTab().setText("Reviews"))
-//        tabLayout.addTab(tabLayout.newTab().setText("Maps"))
-//        tabLayout.addTab(tabLayout.newTab().setText("Category"))
+        pager2.isUserInputEnabled = false
 
         TabLayoutMediator(tabLayout,pager2){tab,position ->
             when(position){
