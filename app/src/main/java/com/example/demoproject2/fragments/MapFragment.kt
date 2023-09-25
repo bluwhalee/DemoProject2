@@ -53,7 +53,6 @@ class MapFragment : Fragment() {
             this.state = BottomSheetBehavior.STATE_COLLAPSED
         }
 //        val bottomSheetFragment = BottomSheetFragment.newInstance(100)
-//        bottomSheetFragment.show(childFragmentManager, bottomSheetFragment.tag)
 
 
     }
