@@ -7,18 +7,18 @@
     tools:context=".activities.MainActivity">
     <ImageView
         android:id="@+id/btn_back"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/s_image"
+        android:layout_height="@dimen/s_image"
         android:src="@drawable/left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/main_tabLayout"
         app:layout_constraintTop_toTopOf="parent"
-        android:padding="10dp"
+        android:padding="@dimen/s_padding"
         />
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/main_tabLayout"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/zero_layout"
+        android:layout_height="@dimen/s_layout"
         app:layout_constraintStart_toEndOf="@id/btn_back"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,8 +32,8 @@
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/main_viewPager"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/zero_layout"
+        android:layout_height="@dimen/zero_layout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

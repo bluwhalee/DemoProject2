@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:cardCornerRadius="50dp"
+    app:cardCornerRadius="@dimen/m_radius"
     >
     <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -12,7 +12,7 @@
     <ImageView
         android:id="@+id/cI_imageView"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="@dimen/m_layout"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:padding="10dp"
+        android:padding="@dimen/s_padding"
         >
         <TextView
             android:id="@+id/cI_textView_Name"
@@ -35,15 +35,15 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/cI_innerLayout"
-            android:text="1. Mini Pancake"
+            android:text="@string/example_name"
             android:textStyle="bold"
-            android:textSize="15sp"
+            android:textSize="@dimen/m_font"
 
             />
         <ImageView
             android:id="@+id/cI_imageView_Icon"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/xs_image"
+            android:layout_height="@dimen/xs_image"
             app:layout_constraintTop_toBottomOf="@id/cI_textView_Name"
             app:layout_constraintStart_toStartOf="parent"
             android:src="@drawable/group_591"
@@ -55,8 +55,8 @@
             app:layout_constraintStart_toEndOf="@id/cI_imageView_Icon"
             app:layout_constraintTop_toBottomOf="@id/cI_textView_Name"
             android:text="Rating 9.2"
-            android:layout_marginLeft="5dp"
-            android:textColor="#979797"
+            android:layout_marginLeft="@dimen/xs_margin"
+            android:textColor="@color/grey"
             />
         <TextView
             android:id="@+id/cI_textView_Reviews"
@@ -64,8 +64,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cI_imageView_Icon"
-            android:text="112 Reviews"
-            android:textColor="#979797"
+            android:text="@string/example_reviews"
+            android:textColor="@color/grey"
             />
         <TextView
             android:id="@+id/cI_textView_Location"
@@ -73,9 +73,9 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cI_textView_Reviews"
-            android:text="San Fransisco Resturant"
+            android:text="@string/example_location"
             android:textStyle="bold"
-            android:textSize="12sp"
+            android:textSize="@dimen/sm_font"
             />
         <TextView
             android:id="@+id/cI_textView_Opens"
@@ -83,9 +83,9 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cI_textView_Location"
-            android:text="Open Now"
-            android:textColor="#3898F3"
-            android:textSize="12sp"
+            android:text="@string/example_open"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/sm_font"
             />
         <ImageView
             android:id="@+id/cI_imageView_locIcon"
@@ -94,7 +94,7 @@
             app:layout_constraintTop_toTopOf="@id/cI_textView_Opens"
             app:layout_constraintEnd_toStartOf="@id/cI_textView_Distance"
             android:src="@drawable/ic_loc_profile"
-            android:layout_marginRight="5dp"
+            android:layout_marginRight="@dimen/xs_margin"
             />
         <TextView
             android:id="@+id/cI_textView_Distance"
@@ -102,7 +102,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="@id/cI_imageView_locIcon"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="0.2 mi"
+            android:text="@string/example_dist"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

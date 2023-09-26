@@ -1,5 +1,50 @@
 <resources>
     <string name="app_name">DemoProject2</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //dummy
+    <string name="example_name">1. Mini Pancake</string>
+    <string name="example_reviews">112 reviews</string>
+    <string name="example_reviews_rating">Rating 9.2 . (112) Reviews</string>
+    <string name="example_location">San Fransisco Resturant</string>
+    <string name="example_open">Open Now</string>
+    <string name="example_spaced_open">.  Open Now</string>
+    <string name="example_dist">0.2 mi</string>
+    <string name="example_addr">121 El Camino Real, San Francisco, CA</string>
+
+    //titles
+    <string name="reviews_by_dish">Your Reviews By Dish</string>
+    <string name="total">Total</string>
+    <string name="total_number">555</string>
+    <string name="review_map">Review Map</string>
+    <string name="all">All</string>
+    <string name="all_results">All Results</string>
+    <string name="all_reviews">All Reviews</string>
+    <string name="search">Search</string>
+    <string name="sort">Sort</string>
+    <string name="reviews">Reviews</string>
+    <string name="review_members">Reviews Member since October 2018\n 223 Reviews </string>
+    <string name="rating">Rating</string>
+    <string name="menu_items_rating">Menu Items Rating</string>
+    <string name="latest_activity">Latest Activity</string>
+    <string name="see_all">See All</string>
+    <string name="top_5">Top 5</string>
+
+    //numbers
+    <string name="nine">9+</string>
+    <string name="seven">7+</string>
+    <string name="eight">8</string>
+    <string name="seven_simple">7</string>
+    <string name="six">6</string>
+    <string name="one_to_five">1 to 5</string>
+    <string name="total_9">175</string>
+    <string name="total_8">21</string>
+    <string name="total_7">10</string>
+    <string name="total_6">5</string>
+    <string name="total_5">5</string>
+    <string name="seven_seven">7.7</string>
+
+
+
+
 </resources>

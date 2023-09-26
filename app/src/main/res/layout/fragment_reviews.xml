@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.ReviewsFragment"
-    android:paddingTop="20dp"
+    android:paddingTop="@dimen/lm_padding"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,24 +16,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:paddingLeft="@dimen/lm_padding"
+        android:paddingRight="@dimen/lm_padding"
         >
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reviews"
+            android:text="@string/reviews"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:textStyle="bold"
-            android:textSize="20dp"/>
+            android:textSize="@dimen/lm_font"/>
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reviews Member since October 2018\n 223 Reviews "
+            android:text="@string/review_members"
             app:layout_constraintBottom_toBottomOf="@+id/textView4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -45,25 +45,25 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:textStyle="bold"
-            android:textSize="30dp"
-            android:text="7.7"
+            android:textSize="@dimen/xl_font"
+            android:text="@string/seven_seven"
             />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ratting"
+            android:text="@string/rating"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
             android:textStyle="bold"
-            android:textSize="20dp"/>
+            android:textSize="@dimen/lm_font"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <View
         android:id="@+id/divider1"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="@dimen/one_layout"
+        android:layout_marginTop="@dimen/lm_margin"
         app:layout_constraintTop_toBottomOf="@id/reviews_block1"
         android:background="#DADADA"
 
@@ -73,26 +73,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/divider1"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:layout_marginTop="20dp"
+        android:paddingLeft="@dimen/lm_padding"
+        android:paddingRight="@dimen/lm_padding"
+        android:layout_marginTop="@dimen/lm_margin"
         >
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Menu Items Rating"
+            android:text="@string/menu_items_rating"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:textSize="15dp"
-
+            android:textSize="@dimen/m_font"
             android:textStyle="bold"
             />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/textView5"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/s_margin"
             android:orientation="vertical"
             >
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -105,25 +104,25 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/logo1"
-                    android:text="9+"
-                    android:textSize="15sp"
-                    android:layout_marginEnd="8dp"
+                    android:text="@string/nine"
+                    android:textSize="@dimen/m_font"
+                    android:layout_marginEnd="@dimen/sx_margin"
                     />
                 <ImageView
                     android:id="@+id/logo1"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="@dimen/sx_layout"
+                    android:layout_height="@dimen/sx_layout"
                     app:layout_constraintEnd_toStartOf="@id/progress1"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:src="@drawable/group_591"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginEnd="@dimen/s_margin"
                     />
 
                 <ProgressBar
                     android:id="@+id/progress1"
-                    android:layout_width="225dp"
-                    android:layout_height="15dp"
+                    android:layout_width="@dimen/l_layout"
+                    android:layout_height="@dimen/xs_layout"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -140,16 +139,16 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@id/progress1"
-                    android:layout_marginLeft="10dp"
-                    android:text="175"
-                    android:textSize="15dp"
+                    android:layout_marginStart="@dimen/s_margin"
+                    android:text="@string/total_9"
+                    android:textSize="@dimen/m_font"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/xs_margin"
                 >
                 <TextView
                     android:id="@+id/tv2"
@@ -158,25 +157,25 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/logo2"
-                    android:text="8"
-                    android:textSize="15sp"
-                    android:layout_marginEnd="8dp"
+                    android:text="@string/eight"
+                    android:textSize="@dimen/m_font"
+                    android:layout_marginEnd="@dimen/sx_margin"
                     />
                 <ImageView
                     android:id="@+id/logo2"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="@dimen/sx_layout"
+                    android:layout_height="@dimen/sx_layout"
                     app:layout_constraintEnd_toStartOf="@id/progress2"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:src="@drawable/group_591"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginEnd="@dimen/s_margin"
                     />
 
                 <ProgressBar
                     android:id="@+id/progress2"
-                    android:layout_width="225dp"
-                    android:layout_height="15dp"
+                    android:layout_width="@dimen/l_layout"
+                    android:layout_height="@dimen/xs_layout"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -193,16 +192,16 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@id/progress2"
-                    android:layout_marginLeft="10dp"
-                    android:text="21"
-                    android:textSize="15dp"
+                    android:layout_marginStart="@dimen/s_margin"
+                    android:text="@string/total_8"
+                    android:textSize="@dimen/m_font"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/xs_margin"
                 >
                 <TextView
                     android:id="@+id/tv3"
@@ -211,25 +210,25 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/logo3"
-                    android:text="7"
-                    android:textSize="15sp"
-                    android:layout_marginEnd="8dp"
+                    android:text="@string/seven_simple"
+                    android:textSize="@dimen/m_font"
+                    android:layout_marginEnd="@dimen/s_margin"
                     />
                 <ImageView
                     android:id="@+id/logo3"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="@dimen/sx_layout"
+                    android:layout_height="@dimen/sx_layout"
                     app:layout_constraintEnd_toStartOf="@id/progress3"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:src="@drawable/group_591"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginEnd="@dimen/s_margin"
                     />
 
                 <ProgressBar
                     android:id="@+id/progress3"
-                    android:layout_width="225dp"
-                    android:layout_height="15dp"
+                    android:layout_width="@dimen/l_layout"
+                    android:layout_height="@dimen/xs_layout"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -246,15 +245,15 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@id/progress3"
-                    android:layout_marginLeft="10dp"
-                    android:text="10"
-                    android:textSize="15dp"
+                    android:layout_marginStart="@dimen/s_margin"
+                    android:text="@string/total_7"
+                    android:textSize="@dimen/m_font"
                     />
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="@dimen/xs_margin">
                 <TextView
                     android:id="@+id/tv4"
                     android:layout_width="wrap_content"
@@ -262,25 +261,25 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/logo4"
-                    android:text="6"
-                    android:textSize="15sp"
-                    android:layout_marginEnd="8dp"
+                    android:text="@string/six"
+                    android:textSize="@dimen/m_font"
+                    android:layout_marginEnd="@dimen/sx_margin"
                     />
                 <ImageView
                     android:id="@+id/logo4"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="@dimen/sx_layout"
+                    android:layout_height="@dimen/sx_layout"
                     app:layout_constraintEnd_toStartOf="@id/progress4"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:src="@drawable/group_591"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginEnd="@dimen/s_margin"
                     />
 
                 <ProgressBar
                     android:id="@+id/progress4"
-                    android:layout_width="225dp"
-                    android:layout_height="15dp"
+                    android:layout_width="@dimen/l_layout"
+                    android:layout_height="@dimen/xs_layout"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -297,16 +296,16 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@id/progress4"
-                    android:layout_marginLeft="10dp"
-                    android:text="5"
-                    android:textSize="15dp"
+                    android:layout_marginStart="@dimen/s_margin"
+                    android:text="@string/total_6"
+                    android:textSize="@dimen/m_font"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="@dimen/xs_margin">
                 <TextView
                     android:id="@+id/tv5"
                     android:layout_width="wrap_content"
@@ -314,25 +313,25 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/logo5"
-                    android:text="1 to 5"
-                    android:textSize="15sp"
-                    android:layout_marginEnd="8dp"
+                    android:text="@string/one_to_five"
+                    android:textSize="@dimen/m_font"
+                    android:layout_marginEnd="@dimen/sx_margin"
                     />
                 <ImageView
                     android:id="@+id/logo5"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="@dimen/sx_layout"
+                    android:layout_height="@dimen/sx_layout"
                     app:layout_constraintEnd_toStartOf="@id/progress5"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:src="@drawable/group_591"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginEnd="@dimen/s_margin"
                     />
 
                 <ProgressBar
                     android:id="@+id/progress5"
-                    android:layout_width="225dp"
-                    android:layout_height="15dp"
+                    android:layout_width="@dimen/l_layout"
+                    android:layout_height="@dimen/xs_layout"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -349,9 +348,9 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@id/progress5"
-                    android:layout_marginLeft="10dp"
-                    android:text="5"
-                    android:textSize="15dp"
+                    android:layout_marginStart="@dimen/s_margin"
+                    android:text="@string/total_5"
+                    android:textSize="@dimen/m_font"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -361,10 +360,10 @@
     <View
         android:id="@+id/divider2"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="@dimen/one_layout"
+        android:layout_marginTop="@dimen/lm_margin"
         app:layout_constraintTop_toBottomOf="@id/reviews_block2"
-        android:background="#DADADA"
+        android:background="@color/lightGrey"
 
         />
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -372,26 +371,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/divider2"
-
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/lm_margin"
         >
         <TextView
             android:id="@+id/reviews_block3_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="All Reviews"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:text="@string/all_reviews"
+            android:paddingLeft="@dimen/lm_padding"
+            android:paddingRight="@dimen/lm_padding"
             android:textStyle="bold"
-            android:textSize="25dp"/>
+            android:textSize="@dimen/l_font"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/reviews_recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="@dimen/ml_layout"
+            android:layout_marginTop="@dimen/m_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

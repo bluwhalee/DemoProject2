@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         pager2 = binding.mainViewPager
         tabLayout = binding.mainTabLayout
         pagerAdapter = MainVPAdapter(supportFragmentManager, lifecycle)
-        pager2.adapter = pagerAdapter
+        binding.mainViewPager.adapter = pagerAdapter
         pager2.isUserInputEnabled = false
 
         TabLayoutMediator(tabLayout,pager2){tab,position ->

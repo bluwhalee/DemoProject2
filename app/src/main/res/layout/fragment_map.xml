@@ -14,43 +14,43 @@
             android:layout_width="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="Review Map"
-            android:textSize="20dp"
+            android:text="@string/review_map"
+            android:textSize="@dimen/lm_font"
             android:textStyle="bold"
-            android:paddingRight="20dp"
-            android:paddingLeft="20dp"
-            android:paddingTop="20dp"
+            android:paddingRight="@dimen/lm_padding"
+            android:paddingLeft="@dimen/lm_padding"
+            android:paddingTop="@dimen/lm_padding"
             />
         <EditText
             android:id="@+id/map_editText"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_layout"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/map_textView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/s_margin"
             android:background="@drawable/search_bar_bg"
             android:drawableStart="@drawable/baseline_search_24"
-            android:padding="15dp"
-            android:hint="Search"
+            android:padding="@dimen/m_padding"
+            android:hint="@string/search"
 
             />
         <fragment
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="@dimen/zero_layout"
+            android:layout_height="@dimen/zero_layout"
             app:layout_constraintTop_toBottomOf="@id/map_editText"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/s_margin"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_sheet"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="@dimen/xl_layout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,13 +59,13 @@
         >
         <ImageView
             android:id="@+id/sheet_minimize"
-            android:layout_width="100dp"
+            android:layout_width="@dimen/m_layout"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:src="@drawable/baseline_minimize_24"
-            android:paddingBottom="10dp"
+            android:paddingBottom="@dimen/s_padding"
             />
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/bottom_sheet_stats"
@@ -74,7 +74,7 @@
             app:layout_constraintTop_toBottomOf="@id/sheet_minimize"
             app:layout_constraintStart_toStartOf="parent"
             android:background="@drawable/round_grey_bg"
-            android:padding="10dp"
+            android:padding="@dimen/s_padding"
             >
             <TextView
                 android:id="@+id/bottom_sheet_all"
@@ -83,7 +83,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:text="All"
+                android:text="@string/all"
                 android:textStyle="bold"
                 />
             <TextView
@@ -93,18 +93,18 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/bottom_sheet_all"
-                android:layout_marginLeft="10dp"
-                android:text="9+"
+                android:layout_marginStart="@dimen/s_margin"
+                android:text="@string/nine"
                 />
             <ImageView
                 android:id="@+id/bottom_sheet_img1"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
+                android:layout_width="@dimen/xs_layout"
+                android:layout_height="@dimen/xs_layout"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/bottom_sheet_9"
                 android:src="@drawable/group_591"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="@dimen/xs_margin"
                 />
             <TextView
                 android:id="@+id/bottom_sheet_7"
@@ -113,18 +113,18 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/bottom_sheet_img1"
-                android:text="7+"
-                android:layout_marginLeft="10dp"
+                android:text="@string/seven"
+                android:layout_marginStart="@dimen/s_margin"
                 />
             <ImageView
                 android:id="@+id/bottom_sheet_img2"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
+                android:layout_width="@dimen/xs_layout"
+                android:layout_height="@dimen/xs_layout"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/bottom_sheet_7"
                 android:src="@drawable/group_591"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="@dimen/xs_margin"
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -135,7 +135,7 @@
             app:layout_constraintStart_toEndOf="@id/bottom_sheet_stats"
             app:layout_constraintEnd_toStartOf="@id/bottom_sheet_open_parent"
             android:background="@drawable/rounded_white_bg"
-            android:padding="10dp"
+            android:padding="@dimen/s_padding"
             >
             <TextView
                 android:id="@+id/bottom_sheet_sort"
@@ -144,7 +144,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:text="Sort"
+                android:text="@string/sort"
                 />
             <ImageView
                 android:layout_width="wrap_content"
@@ -153,7 +153,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/bottom_sheet_sort"
                 android:src="@drawable/polygon_1"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="@dimen/xs_margin"
 
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -165,7 +165,7 @@
             app:layout_constraintStart_toEndOf="@id/bottom_sheet_sort_parent"
             app:layout_constraintEnd_toStartOf="@id/bottom_sheet_filter"
             android:background="@drawable/rounded_white_bg"
-            android:padding="10dp"
+            android:padding="@dimen/s_padding"
             >
             <TextView
                 android:id="@+id/bottom_sheet_open"
@@ -174,7 +174,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:text="Open Now"
+                android:text="@string/example_open"
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -185,12 +185,12 @@
             app:layout_constraintStart_toEndOf="@id/bottom_sheet_open_parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@drawable/rounded_white_bg"
-            android:padding="10dp"
+            android:padding="@dimen/s_padding"
             >
             <ImageView
                 android:id="@+id/bottom_sheet_filter_img"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="@dimen/sx_layout"
+                android:layout_height="@dimen/sx_layout"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -203,30 +203,30 @@
             android:layout_width="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/bottom_sheet_stats"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="All Results"
-            android:textSize="20dp"
+            android:text="@string/all_results"
+            android:textSize="@dimen/lm_font"
             android:textStyle="bold"
-            android:paddingRight="15dp"
-            android:paddingLeft="15dp"
-            android:paddingTop="15dp"
+            android:paddingRight="@dimen/m_padding"
+            android:paddingLeft="@dimen/m_padding"
+            android:paddingTop="@dimen/m_padding"
             />
         <View
             android:id="@+id/divider1"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="@dimen/one_layout"
+            android:layout_marginTop="@dimen/lm_margin"
             app:layout_constraintTop_toBottomOf="@id/bottom_sheet_all_results"
-            android:background="#DADADA"
+            android:background="@color/lightGrey"
             />
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/zero_layout"
             app:layout_constraintTop_toBottomOf="@id/divider1"
             app:layout_constraintBottom_toBottomOf="parent"
             >
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/bottom_sheet_item"
@@ -234,12 +234,12 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@id/divider1"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:padding="15dp"
+                    android:padding="@dimen/m_padding"
                     >
                     <ImageView
                         android:id="@+id/item_imageView"
-                        android:layout_width="80dp"
-                        android:layout_height="0dp"
+                        android:layout_width="@dimen/sm_layout"
+                        android:layout_height="@dimen/zero_layout"
                         android:src="@drawable/a"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -252,16 +252,16 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toTopOf="@id/item_imageView"
                         app:layout_constraintStart_toEndOf="@id/item_imageView"
-                        android:text="1. Mini Pancake"
+                        android:text="@string/example_name"
                         android:textStyle="bold"
-                        android:textSize="15sp"
-                        android:layout_marginLeft="10dp"
+                        android:textSize="@dimen/m_font"
+                        android:layout_marginStart="@dimen/s_margin"
 
                         />
                     <ImageView
                         android:id="@+id/bottom_sheet_item_logo"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
+                        android:layout_width="@dimen/xs_layout"
+                        android:layout_height="@dimen/xs_layout"
                         app:layout_constraintTop_toBottomOf="@id/item_name"
                         app:layout_constraintStart_toStartOf="@id/item_name"
                         android:src="@drawable/group_591"
@@ -272,9 +272,9 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toBottomOf="@id/item_name"
                         app:layout_constraintStart_toEndOf="@id/bottom_sheet_item_logo"
-                        android:text="Rating 9.2 . (112) Reviews"
-                        android:textSize="12sp"
-                        android:layout_marginLeft="5dp"
+                        android:text="@string/example_reviews_rating"
+                        android:textSize="@dimen/sm_font"
+                        android:layout_marginStart="5dp"
                         />
                     <TextView
                         android:id="@+id/bottom_sheet_loc"
@@ -282,9 +282,9 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_rating"
                         app:layout_constraintStart_toStartOf="@id/item_name"
-                        android:text="San Francisco Farm Restaurant"
+                        android:text="@string/example_location"
                         android:textStyle="bold"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/sm_font"
                         />
                     <TextView
                         android:id="@+id/bottom_sheet_address"
@@ -292,18 +292,18 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_loc"
                         app:layout_constraintStart_toStartOf="@id/item_name"
-                        android:text="121 El Camino Real, San Francisco, CA"
-                        android:textSize="12sp"
+                        android:text="@string/example_addr"
+                        android:textSize="@dimen/sm_font"
                         />
                     <ImageView
                         android:id="@+id/bottom_sheet_loc_icon"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
+                        android:layout_width="@dimen/xs_layout"
+                        android:layout_height="@dimen/xs_layout"
                         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_address"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/item_name"
                         android:src="@drawable/ic_loc_profile"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="@dimen/xs_margin"
                         />
                     <TextView
                         android:id="@+id/bottom_sheet_dist"
@@ -312,8 +312,8 @@
                         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_address"
                         app:layout_constraintStart_toEndOf="@id/bottom_sheet_loc_icon"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        android:text="0.2 mi"
-                        android:textSize="12sp"
+                        android:text="@string/example_dist"
+                        android:textSize="@dimen/sm_font"
                         />
                     <TextView
                         android:id="@+id/cI_textView_Opens"
@@ -322,10 +322,10 @@
                         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_address"
                         app:layout_constraintStart_toEndOf="@id/bottom_sheet_dist"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        android:text=".  Open Now"
-                        android:textColor="#3898F3"
-                        android:textSize="12sp"
-                        android:layout_marginLeft="5dp"
+                        android:text="@string/example_spaced_open"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/sm_font"
+                        android:layout_marginStart="@dimen/xs_margin"
                         />
                     <ImageView
                         android:layout_width="wrap_content"
@@ -339,9 +339,9 @@
                 <View
                     android:id="@+id/divider2"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                    android:layout_height="@dimen/one_layout"
                     app:layout_constraintTop_toBottomOf="@id/bottom_sheet_item"
-                    android:background="#DADADA"
+                    android:background="@color/lightGrey"
                     />
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/bottom_sheet_item2"
@@ -349,12 +349,12 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@id/divider2"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:padding="15dp"
+                    android:padding="@dimen/m_padding"
                     >
                     <ImageView
                         android:id="@+id/item_imageView2"
-                        android:layout_width="80dp"
-                        android:layout_height="0dp"
+                        android:layout_width="@dimen/sm_layout"
+                        android:layout_height="@dimen/zero_layout"
                         android:src="@drawable/b"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -367,16 +367,16 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toTopOf="@id/item_imageView2"
                         app:layout_constraintStart_toEndOf="@id/item_imageView2"
-                        android:text="1. Mini Pancake"
+                        android:text="@string/example_name"
                         android:textStyle="bold"
-                        android:textSize="15sp"
-                        android:layout_marginLeft="10dp"
+                        android:textSize="@dimen/m_font"
+                        android:layout_marginStart="@dimen/s_margin"
 
                         />
                     <ImageView
                         android:id="@+id/bottom_sheet_item_logo2"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
+                        android:layout_width="@dimen/xs_layout"
+                        android:layout_height="@dimen/xs_layout"
                         app:layout_constraintTop_toBottomOf="@id/item_name2"
                         app:layout_constraintStart_toStartOf="@id/item_name2"
                         android:src="@drawable/group_591"
@@ -387,9 +387,9 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toBottomOf="@id/item_name2"
                         app:layout_constraintStart_toEndOf="@id/bottom_sheet_item_logo2"
-                        android:text="Rating 9.2 . (112) Reviews"
-                        android:textSize="12sp"
-                        android:layout_marginLeft="5dp"
+                        android:text="@string/example_reviews_rating"
+                        android:textSize="@dimen/sm_font"
+                        android:layout_marginStart="@dimen/xs_margin"
                         />
                     <TextView
                         android:id="@+id/bottom_sheet_loc2"
@@ -397,9 +397,9 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_rating2"
                         app:layout_constraintStart_toStartOf="@id/item_name2"
-                        android:text="San Francisco Farm Restaurant"
+                        android:text="@string/example_location"
                         android:textStyle="bold"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/sm_font"
                         />
                     <TextView
                         android:id="@+id/bottom_sheet_address2"
@@ -407,18 +407,18 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_loc2"
                         app:layout_constraintStart_toStartOf="@id/item_name2"
-                        android:text="121 El Camino Real, San Francisco, CA"
-                        android:textSize="12sp"
+                        android:text="@string/example_addr"
+                        android:textSize="@dimen/sm_font"
                         />
                     <ImageView
                         android:id="@+id/bottom_sheet_loc_icon2"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
+                        android:layout_width="@dimen/sx_layout"
+                        android:layout_height="@dimen/sx_layout"
                         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_address2"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/item_name2"
                         android:src="@drawable/ic_loc_profile"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="@dimen/xs_margin"
                         />
                     <TextView
                         android:id="@+id/bottom_sheet_dist2"
@@ -427,8 +427,8 @@
                         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_address2"
                         app:layout_constraintStart_toEndOf="@id/bottom_sheet_loc_icon2"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        android:text="0.2 mi"
-                        android:textSize="12sp"
+                        android:text="@string/example_dist"
+                        android:textSize="@dimen/sm_font"
                         />
                     <TextView
                         android:id="@+id/cI_textView_Opens2"
@@ -437,10 +437,10 @@
                         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_address2"
                         app:layout_constraintStart_toEndOf="@id/bottom_sheet_dist2"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        android:text=".  Open Now"
-                        android:textColor="#3898F3"
-                        android:textSize="12sp"
-                        android:layout_marginLeft="5dp"
+                        android:text="@string/example_spaced_open"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/sm_font"
+                        android:layout_marginStart="@dimen/xs_margin"
                         />
                     <ImageView
                         android:layout_width="wrap_content"
@@ -454,9 +454,9 @@
                 <View
                     android:id="@+id/divider3"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                    android:layout_height="@dimen/one_layout"
                     app:layout_constraintTop_toBottomOf="@id/bottom_sheet_item2"
-                    android:background="#DADADA"
+                    android:background="@color/lightGrey"
                     />
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/bottom_sheet_item3"
@@ -464,12 +464,12 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@id/divider3"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:padding="15dp"
+                    android:padding="@dimen/m_padding"
                     >
                     <ImageView
                         android:id="@+id/item_imageView3"
-                        android:layout_width="80dp"
-                        android:layout_height="0dp"
+                        android:layout_width="@dimen/sm_layout"
+                        android:layout_height="@dimen/zero_layout"
                         android:src="@drawable/c"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -482,16 +482,16 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toTopOf="@id/item_imageView3"
                         app:layout_constraintStart_toEndOf="@id/item_imageView3"
-                        android:text="1. Mini Pancake"
+                        android:text="@string/example_name"
                         android:textStyle="bold"
-                        android:textSize="15sp"
-                        android:layout_marginLeft="10dp"
+                        android:textSize="@dimen/m_font"
+                        android:layout_marginStart="@dimen/s_margin"
 
                         />
                     <ImageView
                         android:id="@+id/bottom_sheet_item_logo3"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
+                        android:layout_width="@dimen/xs_layout"
+                        android:layout_height="@dimen/xs_layout"
                         app:layout_constraintTop_toBottomOf="@id/item_name3"
                         app:layout_constraintStart_toStartOf="@id/item_name3"
                         android:src="@drawable/group_591"
@@ -502,9 +502,9 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toBottomOf="@id/item_name3"
                         app:layout_constraintStart_toEndOf="@id/bottom_sheet_item_logo3"
-                        android:text="Rating 9.2 . (112) Reviews"
-                        android:textSize="12sp"
-                        android:layout_marginLeft="5dp"
+                        android:text="@string/example_reviews_rating"
+                        android:textSize="@dimen/sm_font"
+                        android:layout_marginStart="@dimen/xs_margin"
                         />
                     <TextView
                         android:id="@+id/bottom_sheet_loc3"
@@ -512,9 +512,9 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_rating3"
                         app:layout_constraintStart_toStartOf="@id/item_name3"
-                        android:text="San Francisco Farm Restaurant"
+                        android:text="@string/example_location"
                         android:textStyle="bold"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/sm_font"
                         />
                     <TextView
                         android:id="@+id/bottom_sheet_address3"
@@ -522,18 +522,18 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_loc3"
                         app:layout_constraintStart_toStartOf="@id/item_name3"
-                        android:text="121 El Camino Real, San Francisco, CA"
-                        android:textSize="12sp"
+                        android:text="@string/example_addr"
+                        android:textSize="@dimen/sm_font"
                         />
                     <ImageView
                         android:id="@+id/bottom_sheet_loc_icon3"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
+                        android:layout_width="@dimen/xs_layout"
+                        android:layout_height="@dimen/xs_layout"
                         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_address3"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/item_name3"
                         android:src="@drawable/ic_loc_profile"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="@dimen/xs_margin"
                         />
                     <TextView
                         android:id="@+id/bottom_sheet_dist3"
@@ -542,8 +542,8 @@
                         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_address3"
                         app:layout_constraintStart_toEndOf="@id/bottom_sheet_loc_icon3"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        android:text="0.2 mi"
-                        android:textSize="12sp"
+                        android:text="@string/example_dist"
+                        android:textSize="@dimen/sm_font"
                         />
                     <TextView
                         android:id="@+id/cI_textView_Opens3"
@@ -552,10 +552,10 @@
                         app:layout_constraintTop_toBottomOf="@id/bottom_sheet_address3"
                         app:layout_constraintStart_toEndOf="@id/bottom_sheet_dist3"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        android:text=".  Open Now"
-                        android:textColor="#3898F3"
-                        android:textSize="12sp"
-                        android:layout_marginLeft="5dp"
+                        android:text="@string/example_spaced_open"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/sm_font"
+                        android:layout_marginStart="@dimen/xs_margin"
                         />
                     <ImageView
                         android:layout_width="wrap_content"

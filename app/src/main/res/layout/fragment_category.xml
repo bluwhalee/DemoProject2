@@ -11,14 +11,82 @@
         android:layout_width="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Reviews By City"
+        android:text="@string/reviews_by_dish"
         android:textSize="20sp"
         android:textStyle="bold"
         android:paddingRight="20dp"
         android:paddingLeft="20dp"
         android:paddingTop="20dp"
+        android:paddingBottom="20dp"
         />
-    <com.github.mikephil.charting.charts.PieChart
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pie_chart_parent"
+        android:layout_width="@dimen/zero_layout"
+        android:layout_height="@dimen/zero_layout"
+        app:layout_constraintTop_toBottomOf="@id/reviews_textView"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        android:padding="@dimen/lm_padding"
+        >
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pie_chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+        <TextView
+            android:id="@+id/pie_chart_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/pie_chart_total_number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/total"
+            android:textAlignment="center"
+            android:textSize="@dimen/lm_font"
+            />
+        <TextView
+            android:id="@+id/pie_chart_total_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/total_number"
+            android:textAlignment="center"
+            android:textSize="@dimen/l_font"
+            android:textStyle="bold"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category_recyclerView"
+        android:layout_width="@dimen/zero_layout"
+        android:layout_height="@dimen/zero_layout"
+        app:layout_constraintTop_toTopOf="@id/pie_chart_parent"
+        app:layout_constraintBottom_toBottomOf="@id/pie_chart_parent"
+        app:layout_constraintStart_toEndOf="@id/pie_chart_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="@dimen/s_layout"
+        app:layout_constraintTop_toBottomOf="@id/pie_chart_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tabMode="scrollable"
+        />
+    <FrameLayout
+        android:id="@+id/tab_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero_layout"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
