@@ -4,6 +4,8 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.clustering.ClusterItem
 
 class Marker(val name : String, val latlong: LatLng) : ClusterItem {
+
+    //implemented
     override fun getPosition(): LatLng {
         return latlong
     }

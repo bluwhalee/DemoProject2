@@ -13,10 +13,11 @@ import com.example.demoproject2.databinding.FragmentReviewsBinding
 
 class ReviewsFragment : Fragment() {
 
-    private lateinit var recyclerView: RecyclerView
+
     private lateinit var binding: FragmentReviewsBinding
     private var imageList : ArrayList<Int> = ArrayList()
-    private lateinit var reviewsGridAdapter: ReviewsGridAdapter
+
+    //lifecycle
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,14 +27,19 @@ class ReviewsFragment : Fragment() {
         return binding.root
     }
     fun init(){
-        recyclerView = binding.reviewsRecyclerView
         addIamges()
-        reviewsGridAdapter = ReviewsGridAdapter(imageList)
-        recyclerView.apply {
+        setupRecyclerView()
+    }
+
+    //private
+    private fun setupRecyclerView() {
+        var reviewsGridAdapter = ReviewsGridAdapter(imageList)
+        binding.reviewsRecyclerView.apply {
             layoutManager = GridLayoutManager(activity, 3)
             adapter = reviewsGridAdapter
         }
     }
+
     fun addIamges()
     {
         imageList.apply {

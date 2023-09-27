@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.CategoryFragment">
+    tools:context=".fragments.CategoryFragment"
+    android:padding="@dimen/s_padding"
+    >
     <TextView
         android:id="@+id/reviews_textView"
         android:layout_height="wrap_content"
@@ -12,12 +14,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:text="@string/reviews_by_dish"
-        android:textSize="20sp"
+        android:textSize="@dimen/lm_font"
         android:textStyle="bold"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
+        android:paddingTop="@dimen/lm_padding"
+        android:paddingBottom="@dimen/lm_padding"
         />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/pie_chart_parent"

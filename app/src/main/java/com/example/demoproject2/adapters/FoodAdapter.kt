@@ -6,10 +6,9 @@ import com.example.demoproject2.dataclasses.Food
 import com.example.demoproject2.viewholders.FoodViewHolder
 
 
-class FoodAdapter(private val foods: List<Food>) :
-    RecyclerView.Adapter<FoodViewHolder>() {
+class FoodAdapter(private val foods: List<Food>) : RecyclerView.Adapter<FoodViewHolder>() {
 
-
+    //lifecycle
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
         return FoodViewHolder.fromParent(parent)
     }
@@ -19,7 +18,5 @@ class FoodAdapter(private val foods: List<Food>) :
 
     }
 
-    override fun getItemCount(): Int {
-        return foods.size
-    }
+    override fun getItemCount() = foods.size
 }

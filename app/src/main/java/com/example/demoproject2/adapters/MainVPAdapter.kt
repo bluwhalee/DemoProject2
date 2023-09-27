@@ -10,6 +10,7 @@ import com.example.demoproject2.fragments.ReviewsFragment
 
 class MainVPAdapter(fragmentManager : FragmentManager, lifecycle: Lifecycle) : FragmentStateAdapter(fragmentManager,lifecycle)  {
 
+    //implemented
     override fun getItemCount(): Int {
         return 3
     }

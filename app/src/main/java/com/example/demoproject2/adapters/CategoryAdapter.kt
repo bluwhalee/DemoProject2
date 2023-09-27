@@ -8,7 +8,7 @@ import com.example.demoproject2.viewholders.CategoryViewHolder
 class CategoryAdapter(private val categories: List<Category>) :
     RecyclerView.Adapter<CategoryViewHolder>() {
 
-
+    //lifecycle
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
         return CategoryViewHolder.fromParent(parent)
     }
@@ -18,7 +18,5 @@ class CategoryAdapter(private val categories: List<Category>) :
 
     }
 
-    override fun getItemCount(): Int {
-        return categories.size
-    }
+    override fun getItemCount() = categories.size
 }

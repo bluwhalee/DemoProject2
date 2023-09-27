@@ -16,11 +16,8 @@ import com.example.demoproject2.dataclasses.Food
 class TabCategoryFragment : Fragment() {
 
     private lateinit var binding: FragmentTabCategoryBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
 
-    }
-
+    //lifecycle
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,11 +26,13 @@ class TabCategoryFragment : Fragment() {
         init()
         return binding.root
     }
+
+    //private
     private fun init(){
-        setRecyclerView()
+        setRecyclerViews()
     }
 
-    private fun setRecyclerView() {
+    private fun setRecyclerViews() {
         val foods = mutableListOf<Food>()
         foods.apply {
             add(Food("1. Mini Pancake", R.drawable.a, "9.2"))

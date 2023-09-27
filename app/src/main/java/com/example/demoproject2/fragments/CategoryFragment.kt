@@ -24,16 +24,19 @@ class CategoryFragment : Fragment() {
     private var categories : ArrayList<Category> = ArrayList()
     private lateinit var pieDataSet: PieDataSet
     private lateinit var tabLayout: TabLayout
+
+    //lifecycle
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         binding = FragmentCategoryBinding.inflate(layoutInflater)
         init()
         return binding.root
     }
 
+    //private
     private fun init() {
         setData()
         setPieChart()
@@ -51,6 +54,7 @@ class CategoryFragment : Fragment() {
         childFragmentManager.beginTransaction()
             .replace(R.id.tab_fragment, TabCategoryFragment())
             .commit()
+
         tabLayout.addOnTabSelectedListener(object : OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 tab?.let {

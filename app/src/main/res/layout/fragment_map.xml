@@ -50,11 +50,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_sheet"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/xl_layout"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="@color/white"
+        android:paddingStart="@dimen/s_padding"
+        android:paddingEnd="@dimen/s_padding"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
         >
         <ImageView
@@ -206,8 +208,6 @@
             android:text="@string/all_results"
             android:textSize="@dimen/lm_font"
             android:textStyle="bold"
-            android:paddingRight="@dimen/m_padding"
-            android:paddingLeft="@dimen/m_padding"
             android:paddingTop="@dimen/m_padding"
             />
         <View
@@ -234,7 +234,8 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@id/divider1"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:padding="@dimen/m_padding"
+                    android:paddingTop="@dimen/s_padding"
+                    android:paddingBottom="@dimen/s_padding"
                     >
                     <ImageView
                         android:id="@+id/item_imageView"
@@ -349,7 +350,8 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@id/divider2"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:padding="@dimen/m_padding"
+                    android:paddingTop="@dimen/s_padding"
+                    android:paddingBottom="@dimen/s_padding"
                     >
                     <ImageView
                         android:id="@+id/item_imageView2"
@@ -464,7 +466,8 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@id/divider3"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:padding="@dimen/m_padding"
+                    android:paddingTop="@dimen/s_padding"
+                    android:paddingBottom="@dimen/s_padding"
                     >
                     <ImageView
                         android:id="@+id/item_imageView3"

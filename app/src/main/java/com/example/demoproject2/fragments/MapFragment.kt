@@ -1,6 +1,8 @@
 package com.example.demoproject2.fragments
 
 import android.os.Bundle
+import android.util.DisplayMetrics
+import android.view.Display
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -30,46 +32,55 @@ import com.google.maps.android.ui.IconGenerator
 class MapFragment : Fragment() {
 
     private lateinit var binding : FragmentMapBinding
-    private lateinit var mMap: GoogleMap
     private var markerList : ArrayList<Marker> = ArrayList()
+
+    //lifecycle
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
         binding = FragmentMapBinding.inflate(layoutInflater)
-
         init()
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val bottomSheetLayout = view.findViewById<ConstraintLayout>(R.id.bottom_sheet)
-//
-        // Set up BottomSheetBehavior
+        setupBottomSheet(view)
+    }
+
+    //private
+
+    private fun setupBottomSheet(view: View) {
+        val bottomSheetLayout = binding.bottomSheet
         BottomSheetBehavior.from(bottomSheetLayout).apply {
             peekHeight = 100
             this.state = BottomSheetBehavior.STATE_COLLAPSED
+            isFitToContents = false
+            halfExpandedRatio = 0.66f
+
         }
-//        val bottomSheetFragment = BottomSheetFragment.newInstance(100)
-
-
     }
 
     private fun init() {
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment?.getMapAsync(callback)
     }
+    private val callback = OnMapReadyCallback { googleMap ->
+        setUpClusterManager(googleMap)
+    }
 
     private fun setUpClusterManager(mMap: GoogleMap) {
         val clusterManager = ClusterManager<Marker>(activity,mMap)
-        mMap?.setOnCameraIdleListener(clusterManager)
+        mMap.setOnCameraIdleListener(clusterManager)
         mMap.setOnMarkerClickListener(clusterManager)
         getAllMarker()
-        clusterManager.addItems(markerList)
-        clusterManager.cluster()
-        clusterManager.markerCollection.setInfoWindowAdapter(InfoWindowAdapter(activity))
+        clusterManager.apply {
+            addItems(markerList)
+            cluster()
+            markerCollection.setInfoWindowAdapter(InfoWindowAdapter(activity))
+        }
 
     }
 
@@ -97,7 +108,5 @@ class MapFragment : Fragment() {
         }
     }
 
-    private val callback = OnMapReadyCallback { googleMap ->
-        setUpClusterManager(googleMap)
-    }
+
 }

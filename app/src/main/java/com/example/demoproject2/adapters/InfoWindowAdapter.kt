@@ -5,46 +5,36 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import com.example.demoproject2.R
-import com.example.demoproject2.activities.MainActivity
+import com.example.demoproject2.databinding.ItemCustomInfoWindowBinding
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.Marker
 
 class InfoWindowAdapter(val mContext: Context?) : GoogleMap.InfoWindowAdapter {
 
-    var infoWindow: View = LayoutInflater.from(mContext).inflate(R.layout.custom_info_window, null)
-
+    private var binding = ItemCustomInfoWindowBinding.inflate(LayoutInflater.from(mContext), null , false)
+    //implemented
     override fun getInfoContents(p0: Marker): View {
 
         setInfo(p0)
-        return  infoWindow
+        return  binding.root
     }
 
     override fun getInfoWindow(p0: Marker): View? {
         setInfo(p0)
         return null
     }
-
+    //private
     private fun setInfo(marker : Marker){
 
-        // Find views in the custom info window layout
-        val infoWindowImage = infoWindow.findViewById<ImageView>(R.id.cI_imageView)
-        val infoWindowTitle = infoWindow.findViewById<TextView>(R.id.cI_textView_Name)
-        val infoWindowRating = infoWindow.findViewById<TextView>(R.id.cI_textView_Ratting)
-        val infoWindowReviews = infoWindow.findViewById<TextView>(R.id.cI_textView_Reviews)
-        val infoWindowLocation = infoWindow.findViewById<TextView>(R.id.cI_textView_Location)
-        val infoWindowOpens = infoWindow.findViewById<TextView>(R.id.cI_textView_Opens)
-        val infoWindowLocIcon = infoWindow.findViewById<ImageView>(R.id.cI_imageView_locIcon)
-        val infoWindowDistance = infoWindow.findViewById<TextView>(R.id.cI_textView_Distance)
-
-        // Populate the custom info window views with data from the marker
-        infoWindowImage.setImageResource(R.drawable.i)
-        infoWindowTitle.text = marker.title
-        infoWindowRating.text = "Rating 9.2"
-        infoWindowReviews.text = "112 Reviews"
-        infoWindowLocation.text = "Chungi Amar Sidhu"
-        infoWindowOpens.text = "Open Now"
-        infoWindowDistance.text = "0.2 mi"
+        binding.apply {
+            binding.cIImageView.setImageResource(R.drawable.i)
+            binding.cITextViewName.text = marker.title
+            binding.cITextViewRatting.text = "Rating 9.2"
+            binding.cITextViewReviews.text = "112 Reviews"
+            binding.cITextViewLocation.text = "Chungi Amar Sidhu"
+            binding.cITextViewOpens.text = "Open Now"
+            binding.cITextViewDistance.text = "0.2 mi"
+        }
     }
 }

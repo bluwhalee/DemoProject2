@@ -54,8 +54,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toEndOf="@id/cI_imageView_Icon"
             app:layout_constraintTop_toBottomOf="@id/cI_textView_Name"
-            android:text="Rating 9.2"
-            android:layout_marginLeft="@dimen/xs_margin"
+            android:text="@string/example_rating"
+            android:layout_marginStart="@dimen/xs_margin"
             android:textColor="@color/grey"
             />
         <TextView
@@ -89,8 +89,8 @@
             />
         <ImageView
             android:id="@+id/cI_imageView_locIcon"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/sx_layout"
+            android:layout_height="@dimen/sx_layout"
             app:layout_constraintTop_toTopOf="@id/cI_textView_Opens"
             app:layout_constraintEnd_toStartOf="@id/cI_textView_Distance"
             android:src="@drawable/ic_loc_profile"

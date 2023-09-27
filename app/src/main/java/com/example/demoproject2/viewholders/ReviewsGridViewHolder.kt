@@ -8,8 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.demoproject2.R
 
 class ReviewsGridViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    val imageView = itemView.findViewById<ImageView>(R.id.food_imageView)
 
+    fun bind(imageId: Int){
+        itemView.findViewById<ImageView>(R.id.food_imageView).setImageResource(imageId)
+    }
     companion object {
         fun fromParent(parent : ViewGroup) : ReviewsGridViewHolder{
             return ReviewsGridViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.grid_item,parent, false))
